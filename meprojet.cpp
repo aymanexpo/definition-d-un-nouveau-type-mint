@@ -1,4 +1,4 @@
-//----------------Aymane Talibi        Mohamed Benyahya---------3IIR2----
+//----------------Aymane Talibi---------3IIR2----
 #include<string>
 #include<stdio.h>
 #include<stdlib.h>
@@ -17,7 +17,7 @@ using namespace std;//---------------------------
         mint(){
         	maChaine=NULL;
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
         mint(char* val){
 			while(val[i]){
 				if(val[i]>=48&&val[i]<=57){
@@ -30,28 +30,28 @@ using namespace std;//---------------------------
 				}
 			}
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
         mint(const mint &myMint){
         	this.maChaine=new char[strlen(myMint.maChaine) + 1];
         	strcpy(this.maChaine,myMint.maChaine);
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
 		mint(const int myInt){
 			this.maChaine = new char[strlen(itoa(myInt)) + 1];	
 			strcpy(this.maChaine, itoa(myInt));
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
         ~mint(){
         	delete this.maChaine;
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         mint operator=(const mint &myMint){
 			delete this.maChaine;
 			this.maChaine = new char[strlen[myMint] + 1];
 			strcpy(this.maChaine,myMint.maChaine);
 			return *this;
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
         mint operator=(const int myInt){
 			delete this.maChaine;
 			this.maChaine = new char[strlen(itoa(myInt)) + 1];
@@ -64,7 +64,7 @@ using namespace std;//---------------------------
         	}
 			return *this;
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         mint operator+=(const mint &myMint){
         	int i,a,b,j;
         	for(i=0;i<strlen(this.maChaine);i++){
@@ -95,7 +95,7 @@ using namespace std;//---------------------------
         	}
         	return *this;
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         mint operator+(const mint & myMint1,const mint & myMint2){
         	int i,a,b,somme;
         	mint myMint3;
@@ -132,7 +132,7 @@ using namespace std;//---------------------------
 			}
 			return myMint3;
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         unsigned int convertToUnsigned(const mint &myMint){
 	 		unsigned int ourUnsigned=0;
 	 		int fois=1;
@@ -142,12 +142,12 @@ using namespace std;//---------------------------
 		 	}
 		 	return ourUnsigned;
 	    }
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         double converFloat(const mint &myMint){
         	double flo=atoi(myMint.maChaine);
         	return flo;
     	}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         bool operator<(const mint &myMint){
         	if(strlen(this.maChaine)<strlen(myMint.maChaine)){
             	return true;
@@ -164,7 +164,7 @@ using namespace std;//---------------------------
             	}
         	}
 		}
-		//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+		//------------ Aymane Talibi--3IIR2-----
         bool operator>(const mint &myMint){
         	if(strlen(this.maChaine)>strlen(myMint.maChaine)){
             	return true;
@@ -181,7 +181,7 @@ using namespace std;//---------------------------
             	}
         	}
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         bool operator<=(const mint &myMint){
 			if(strlen(this.maChaine)<=strlen(myMint.maChaine)){
 				return true;
@@ -191,7 +191,7 @@ using namespace std;//---------------------------
 			}	
 			
 		}
-        //------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+        //------------ Aymane Talibi--3IIR2-----
         bool operator>=(const mint &myMint){
         	if(strlen(this.maChaine)>=strlen(myMint.maChaine)){
 				return true;
@@ -201,7 +201,7 @@ using namespace std;//---------------------------
 			}
 		}
     };// fin de la classe mint
-//------------ Aymane Talibi        Mohamed Benyahya--3IIR2-----
+//------------ Aymane Talibi--3IIR2-----
 
 int main(){
 	
